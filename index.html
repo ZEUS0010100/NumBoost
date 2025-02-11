@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Direct - Livraison de Produits Bio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>
+                    <span class="eco">Éco</span>
+                    <span class="terroir">Terroir</span>
+                </h1>
+            </div>
+            <div class="nav-links">
+                <a href="#"><i class="fas fa-home"></i> Accueil</a>
+                <a href="#producteurs"><i class="fas fa-carrot"></i> Producteurs</a>
+                <a href="#abonnements"><i class="fas fa-box"></i> Abonnements</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Panier</a>
+                <a href="#"><i class="fas fa-user"></i> Compte</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/organic-background.jpg');">
+            <h2>Produits Bio Frais Livrés Chez Vous</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Entrez votre adresse de livraison">
+                <button>Rechercher</button>
+            </div>
+        </section>
+
+        <section class="categories scroll-reveal">
+            <h3>Catégories</h3>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="./images/categories/vegetables.jpg" alt="Légumes">
+                    <h4>Légumes Frais</h4>
+                </div>
+                <div class="category-card">
+                    <img src="./images/categories/fruits.jpg" alt="Fruits">
+                    <h4>Fruits Bio</h4>
+                </div>
+                <div class="category-card">
+                    <img src="./images/categories/dairy.jpg" alt="Produits Laitiers">
+                    <h4>Produits Laitiers</h4>
+                </div>
+                <div class="category-card">
+                    <img src="./images/categories/bakery.jpg" alt="Boulangerie">
+                    <h4>Boulangerie Bio</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurants scroll-reveal">
+            <h3>Featured Organic Restaurants</h3>
+            <div class="restaurant-grid">
+                <div class="restaurant-card">
+                    <img src="./images/restu/restu.jpg" alt="Restaurant 1">
+                    <div class="restaurant-info">
+                        <h4>Green Kitchen</h4>
+                        <p>⭐ 4.8 (500+ reviews)</p>
+                        <p>€€ • Organic • Vegan</p>
+                        <p>30-45 min delivery</p>
+                    </div>
+                </div>
+                <div class="restaurant-card">
+                    <img src="./images/restu/restu2.jpg" alt="Restaurant 2">
+                    <div class="restaurant-info">
+                        <h4>Fresh Farm Table</h4>
+                        <p>⭐ 4.6 (300+ reviews)</p>
+                        <p>€€€ • Farm-to-table • Organic</p>
+                        <p>20-35 min delivery</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscription-boxes scroll-reveal" id="abonnements">
+            <h3>Nos Paniers d'Abonnement</h3>
+            <div class="box-grid">
+                <div class="box-card">
+                    <img src="./images/boxes/weekly-box.jpg" alt="Panier Hebdomadaire">
+                    <div class="box-info">
+                        <h4>Panier Hebdomadaire</h4>
+                        <p>Légumes et fruits frais de saison</p>
+                        <ul>
+                            <li>7-8 variétés de légumes</li>
+                            <li>3-4 variétés de fruits</li>
+                            <li>Livraison hebdomadaire</li>
+                        </ul>
+                        <button class="subscribe-btn">S'abonner</button>
+                    </div>
+                </div>
+                <div class="box-card">
+                    <img src="./images/boxes/monthly-box.jpg" alt="Panier Mensuel">
+                    <div class="box-info">
+                        <h4>Panier Familial Mensuel</h4>
+                        <p>Portions familiales généreuses</p>
+                        <ul>
+                            <li>10-12 variétés de légumes</li>
+                            <li>5-6 variétés de fruits</li>
+                            <li>Livraison mensuelle</li>
+                        </ul>
+                        <button class="subscribe-btn">S'abonner</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="farmers scroll-reveal" id="producteurs">
+            <h3>Nos Producteurs Locaux</h3>
+            <div class="farmer-grid">
+                <div class="farmer-card">
+                    <img src="./images/farmers/farmer1.jpg" alt="Producteur 1">
+                    <div class="farmer-info">
+                        <h4>Jean Dupont</h4>
+                        <p>🌿 Spécialiste en Légumes Bio</p>
+                        <p>Région: Bas Rihn</p>
+                        <p>Spécialités: Tomates, Salades, Carottes</p>
+                        <button class="contact-farmer">Contacter le Producteur</button>
+                    </div>
+                </div>
+                <div class="farmer-card">
+                    <img src="./images/farmers/farmer2.jpg" alt="Producteur 2">
+                    <div class="farmer-info">
+                        <h4>Marie Martin</h4>
+                        <p>🍎 Propriétaire de Verger</p>
+                        <p>Région: Provence</p>
+                        <p>Spécialités: Pommes, Poires, Pêches</p>
+                        <button class="contact-farmer">Contacter le Producteur</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>À Propos</h4>
+                <p>Nous livrons des produits bio frais directement de nos producteurs à votre porte.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: contact@ecoterroir.fr</p>
+                <p>Téléphone: 01 23 45 67 89</p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bio Direct. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".scroll-reveal");
+    
+        function revealOnScroll() {
+            const windowHeight = window.innerHeight;
+    
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    element.classList.add("visible");
+                }
+            });
+        }
+    
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll(); // Run initially in case elements are already in view
+    });
+    </script>
+    <script>
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+      </script>
+      
+    
+</html> 

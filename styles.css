@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Styles */
+.logo {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2E7D32;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1::before {
+    content: "🌿";
+    font-size: 2rem;
+}
+
+.logo h1 span {
+    background: linear-gradient(45deg, #2E7D32, #4CAF50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2.2rem;
+    }
+    
+    .logo h1::before {
+        font-size: 1.6rem;
+    }
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Main Content Styles */
+main {
+    margin-top: 80px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/organic-background.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 80vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    gap: 1rem;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.search-bar button {
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Categories Section */
+.categories {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Exactly 4 columns */
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    width: 100%;
+    max-width: 280px; /* More compact size */
+    margin: 0 auto;
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.category-card img {
+    width: 100%;
+    height: 180px; /* Shorter, more compact height */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.category-card h4 {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Restaurant Cards */
+.restaurants {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.restaurant-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.restaurant-info {
+    padding: 1rem;
+}
+
+.restaurant-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.restaurant-info p {
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+}
+
+/* Subscription Boxes Section */
+.subscription-boxes {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box-card {
+    width: 100%;
+    max-width: 550px; /* Larger width for better visibility */
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.box-card img {
+    width: 100%;
+    height: 350px; /* Taller height for showcase */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.box-info {
+    padding: 2rem;
+}
+
+.box-info h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.box-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.box-info ul {
+    list-style-position: inside;
+    margin: 1.5rem 0;
+}
+
+.box-info li {
+    margin-bottom: 0.8rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.subscribe-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments for subscription boxes */
+@media (max-width: 1024px) {
+    .box-grid {
+        gap: 1.5rem;
+    }
+
+    .box-card {
+        max-width: 480px;
+    }
+
+    .box-card img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 2rem;
+    }
+
+    .box-card {
+        max-width: 100%;
+    }
+
+    .box-card img {
+        height: 280px;
+    }
+
+    .box-info {
+        padding: 1.5rem;
+    }
+
+    .box-info h4 {
+        font-size: 1.3rem;
+    }
+
+    .box-info p,
+    .box-info li {
+        font-size: 1rem;
+    }
+}
+
+/* Farmers Section */
+.farmers {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.farmer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.farmer-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.farmer-card:hover {
+    transform: translateY(-5px);
+}
+
+.farmer-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.farmer-info {
+    padding: 1.5rem;
+}
+
+.farmer-info h4 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.farmer-info p {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.contact-farmer {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.contact-farmer:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments for categories */
+@media (max-width: 1024px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        gap: 1.2rem;
+    }
+
+    .category-card {
+        max-width: 320px; /* Slightly larger on tablets */
+    }
+
+    .category-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+    .category-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 1rem;
+    }
+
+    .category-card {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .category-card img {
+        height: 160px; /* Slightly shorter on mobile */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .search-bar {
+        flex-direction: column;
+    }
+    
+    .search-bar button {
+        width: 100%;
+    }
+} 
+html {
+    scroll-behavior: smooth;
+}
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
